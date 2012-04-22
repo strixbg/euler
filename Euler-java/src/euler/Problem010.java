@@ -5,7 +5,6 @@ package euler;
  * Find the sum of all the primes below two million.
  */
 
-
 public class Problem010 {
     public static void main(String[] args){
         long startTime = System.nanoTime();
