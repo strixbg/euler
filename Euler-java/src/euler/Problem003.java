@@ -9,18 +9,16 @@ class Problem003
 {
 public static void main(String args[])
  {
-long number=600851475143L;
-System.out.println("Given Number is : " + number);
-System.out.print("Prime Factors are : " );
-        for (int i = 2; i <= number / i; i++) {
-
-            while (number % i == 0) {
-                System.out.print(i + ","); 
-                number = number / i;
-            }
+	long number=600851475143L;
+	System.out.println("Given Number is : " + number);
+	System.out.print("Prime Factors are : " );
+	for (int i = 2; i <= number / i; i++) {
+		while (number % i == 0) {
+            System.out.print(i + ","); 
+            number = number / i;
         }
-
-        if (number > 1) System.out.println(number);
     }
+	if (number > 1) System.out.println(number);
+ }
 
 }
