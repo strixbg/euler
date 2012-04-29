@@ -56,6 +56,36 @@ public class Problem011 {
 
 
 	public static void main(String[] args) {
+		long startTime = System.nanoTime();
+		long horizontalMaxProduct = 0;
+		long verticalMaxProduct = 0;
+		long diagonalDownRightMaxProduct = 0;
+		long diagonalUpRightMaxProduct = 0;
+		long maxProduct = 0;
+		for(int y = 0; y < matrix.length; y++) {
+			for(int x = 0; x < matrix.length; x++) {
+				if(x < (matrix.length-3)) {
+					horizontalMaxProduct = matrix[x][y] * matrix[x+1][y] * matrix[x+2][y] * matrix[x+3][y];
+				}
+				if(y < (matrix.length-3)) {
+					verticalMaxProduct = matrix[x][y] * matrix[x][y+1] * matrix[x][y+2] * matrix[x][y+3];
+				}
+				if((x < (matrix.length-3)) && (y < (matrix.length-3))) {
+					diagonalDownRightMaxProduct = matrix[x][y] * matrix[x+1][y+1] * matrix[x+2][y+2] * matrix[x+3][y+3];
+				}
+				if ((x >= 3) && (y < matrix.length - 3)) {
+					diagonalUpRightMaxProduct = matrix[x][y] * matrix[x-1][y+1] * matrix[x-2][y+2] * matrix[x-3][y+3];
+				}
+				if(horizontalMaxProduct > maxProduct) maxProduct = horizontalMaxProduct;
+				if(verticalMaxProduct > maxProduct) maxProduct = verticalMaxProduct;
+				if(diagonalDownRightMaxProduct > maxProduct) maxProduct = diagonalDownRightMaxProduct;
+				if(diagonalUpRightMaxProduct > maxProduct) maxProduct = diagonalUpRightMaxProduct;
 				
+			}
+					
+		}
+		System.out.println(maxProduct);
+		long endTime = System.nanoTime();
+		System.out.printf("Total Time: %.6f seconds\n", ((endTime - startTime)/1000000000.0));	
 	}
 }
