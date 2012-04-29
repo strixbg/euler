@@ -21,8 +21,31 @@ package euler;
 public class Problem012 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		long startTime = System.nanoTime();
+		long triangle = 1;
+		long increment = 2;
+		while(numberOfDivisors(triangle) <= 500){
+			triangle += increment;
+			increment++;
+		}
+		System.out.println(triangle);
+		long endTime = System.nanoTime();
+		System.out.printf("Total Time: %.6f seconds\n", ((endTime - startTime)/1000000000.0));
+	}
+	public static int numberOfDivisors(long testTriangle) {
+		long limit = (long) Math.sqrt(testTriangle);
+		int divisorCount = 1;
+		for (int i = 1; i < limit; i++) {
+			if(testTriangle % i == 0) {
+				if(i *i != testTriangle){
+					divisorCount += 2;
+				}
+				else {
+					divisorCount++;
+				}
+			}
+		}
+		return divisorCount;
 	}
 
 }
