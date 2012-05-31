@@ -7,7 +7,7 @@ package euler;
  * Input is read from the file Problem013.txt, so it 
  * must be in the same directory with Problem013.class file
  * Run program from parent directory using 
- *  java euler/Problem013  
+ *  java euler/Problem013 or setup working directory in Eclipse/Netbeans etc.  
  */
 
 import java.io.*;
