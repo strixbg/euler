@@ -1,5 +1,15 @@
 package euler;
 
+/**
+ * Work out the first ten digits of the sum of the following
+ * one-hundred 50-digit numbers.
+ *
+ * Input is read from the file Problem013.txt, so it 
+ * must be in the same directory with Problem013.class file
+ * Run program from parent directory using 
+ *  java euler/Problem013  
+ */
+
 import java.io.*;
 import java.math.BigInteger;
 import java.util.ArrayList;
