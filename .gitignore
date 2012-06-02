@@ -1,7 +1,9 @@
 bin
 /Euler-java/nbproject/
 /Euler-java/build/
+/Euler-java/.idea
 .classpath
 .project
 build.xml
 manifest.mf
+Euler-java.iml
