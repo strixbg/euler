@@ -2,6 +2,7 @@ bin
 /Euler-java/nbproject/
 /Euler-java/build/
 /Euler-java/.idea
+.setttings
 .classpath
 .project
 build.xml
